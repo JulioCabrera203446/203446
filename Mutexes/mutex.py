@@ -16,7 +16,7 @@ class Hilo(threading.Thread):
         mutex.acquire()
         #sleep(1-self.id)
         crito(self, id)
-        #print("valor" + str(self.id))
+        print("valor" + str(self.id))
         mutex.release()
 
 hilos = [Hilo(1), Hilo(2), Hilo(3)]
