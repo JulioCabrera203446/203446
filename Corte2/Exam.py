@@ -64,10 +64,6 @@ class Atender(threading.Thread):
                             print("Cliente " +str(self.id)+ " no pudo ser atendido, se mando a la cola de espera")
                             cola_clientes.put(self.id)
                             time.sleep(4)
-                else:
-                    print("Cliente " +str(self.id)+ " no pudo ser atendido, se mando a la cola de espera")
-                    cola_clientes.put(self.id)
-                    time.sleep(4)
                 self.id += 1
 
     def run(self):
